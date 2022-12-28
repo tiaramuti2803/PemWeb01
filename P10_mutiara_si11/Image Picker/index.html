@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Picker</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .container {
+            display: flex;
+            margin: 50px 350px;
+            width: 500px;
+            height: 300px;
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            width: 500px;
+            height: 300px;
+        }
+    </style>
+
+    <script>
+        function dekor1() {
+            dekor_1 = document.getElementById("home");
+            dekor_1.style.color = "aqua";
+        }
+
+        function dekor2() {
+            dekor_2 = document.getElementById("home");
+            dekor_2.style.color = "black";
+        }
+        
+        function imagepicker() {
+            const list_image = ["ayam.png", "banteng.png", "gajah.png", "jerapah.png", "kucing.png", "kuda.png", "monyet.png", "sapi.png", "singa.png", "zebra.png"]
+            let pilihan = document.getElementById("option");
+            if(pilihan.value == "Ayam") {
+                let select = list_image[0];
+                document.getElementById("image").src = `images/${select}`
+                alert("Ini gambar ayam.png")
+            }
+
+            if(pilihan.value == "Banteng") {
+                let select = list_image[1];
+                document.getElementById("image").src = `images/${select}`
+                alert("Ini gambar banteng.png")
+            }
+
+            if(pilihan.value == "Gajah") {
+                let select = list_image[2];
+                document.getElementById("image").src = `images/${select}`
+                alert("Ini gambar gajah.png")
+            }
+
+            if(pilihan.value == "Jerapah") {
+                let select = list_image[3];
+                document.getElementById("image").src = `images/${select}`
+                alert("Ini gambar jerapah.png")
+            }
+
+            if(pilihan.value == "Kucing") {
+                let select = list_image[4];
+                document.getElementById("image").src = `images/${select}`
+                alert("Ini gambar kucing.png")
+            }
+            
+            if(pilihan.value == "Kuda") {
+                let select = list_image[5];
+                document.getElementById("image").src = `images/${select}`
+                alert("Ini gambar kuda.png")
+            }
+            
+            if(pilihan.value == "Monyet") {
+                let select = list_image[6];
+                document.getElementById("image").src = `images/${select}`
+                alert("Ini gambar monyet.png")
+            }
+
+            if(pilihan.value == "Sapi") {
+                let select = list_image[7];
+                document.getElementById("image").src = `images/${select}`
+                alert("Ini gambar sapi.png")
+            }
+
+            if(pilihan.value == "Singa") {
+                let select = list_image[8];
+                document.getElementById("image").src = `images/${select}`
+                alert("Ini gambar singa.png")
+            }
+
+            if(pilihan.value == "Zebra") {
+                let select = list_image[9];
+                document.getElementById("image").src = `images/${select}`
+                alert("Ini gambar zebra.png")
+            }
+        }
+    </script>
+</head>
+<body>
+    <a href="" onmouseover="dekor1()" onmouseout="dekor2()" id="home"><h1>Welcome to Image Picker</h1></a>
+    <hr>
+    <br>
+    <select id="option" onchange="imagepicker()">
+        <option value="" selected>Pilih Gambar</option>
+        <option value="Ayam">Ayam</option>
+        <option value="Banteng">Banteng</option>
+        <option value="Gajah">Gajah</option>
+        <option value="Jerapah">Jerapah</option>
+        <option value="Kucing">Kucing</option>
+        <option value="Kuda">Kuda</option>
+        <option value="Monyet">Monyet</option>
+        <option value="Sapi">Sapi</option>
+        <option value="Singa">Singa</option>
+        <option value="Zebra">Zebra</option>
+    </select>
+    <br>
+    <div class="container" id="container">
+        <div class="box" id="box">
+            <img id="image">
+        </div>
+    </div>
+
+
+</body>
+</html>
